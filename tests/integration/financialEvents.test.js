@@ -37,7 +37,7 @@ describe("POST /financial-events", () => {
   });
 
   it("should answer with status 401 when invalid token is given", async () => {
-    const body = {};
+    const body = generateBody();
 
     const response = await agent.post("/financial-events").send(body).set("Authorization", "Bearer invalid_token");
 

@@ -5,7 +5,6 @@ export async function findUserByEmail(email){
         `SELECT * FROM "users" WHERE "email"=$1`,
         [email]
     );
-    console.log(existingUserWithGivenEmail.rows[0])
     return existingUserWithGivenEmail.rows[0];
 }
 
